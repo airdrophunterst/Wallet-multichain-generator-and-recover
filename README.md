@@ -1,77 +1,29 @@
-# SOLANA WALLET GENERATOR GUIDE
+Update tool auto tạo ví multi chain
 
-A simple and user-friendly Node.js script designed to generate multiple Solana wallets.
+ℹ️ Tool này giúp ae tạo ví số lượng lớn đồng thời khôi phục ví từ seed pharse. AE tạo rồi dùng mấy ví đó qua các dự án, hạn chế spam ví mới
 
-It generates and displays the **Public Key** (Address), the **Private Key**, and the **Mnemonic Recovery Phrase** for each wallet in a clean box format in your console. Credentials are also saved locally to a text file.
+Các chain hỗ trợ - Tạo:
 
+✔️ Aptos (APT)
 
-## FEATURES
+✔️ Evm chain (ETH, BSC, BASE, OP,...)
 
+✔️ Solana chain (sol)
 
+✔️ Sui chain (sui)
 
- - Instantly create multiple crypto wallets in one go.
+Các chain hỗ trợ - Khôi phục:
 
- - Neatly organized wallet details (Address, Private Key, and Secret Phrase).
+✔️ Evm chain (ETH, BSC, BASE, OP,...)
 
- - Automatically saves all wallet details in a file for easy access.
-## PRE REQUISITES
+===========
 
- - Ensure Git, Node.js, and npm are installed. If not, install them using your VPS distribution's package manager.
+🖥 Hướng dẫn: Sau khi tải về giải nén, mở terminal
 
-```bash
-  sudo apt update
-```
-```bash
-  sudo apt install git nodejs npm -y
-```
+1️⃣ npm install để cài các module cần thiết.
 
-## INSTALLATION GUIDE
+2️⃣ Chạy tool bằng lệnh : node main
 
-Install Dependencies
-```bash
-    sudo apt update && sudo apt upgrade -y
-    sudo apt install -y git nodejs npm
-```
-Clone Repository
-```bash
-    git clone https://github.com/cryptowithshashi/SOLANA-WALLET-GENERATOR.git
-```
-```bash
-    cd SOLANA-WALLET-GENERATOR
-```
+Lưu ý:
 
-Install Packages
-```bash
-    npm install
-```
-Execute the code
-```bash
-    node index.js
-```
-Use this command to check your wallet's info
-```bash
-    nano solana_wallet_outputs.txt
-```
-
-If you found error in your terminal is due to PowerShell's execution policy restricting script execution. You can enable script execution by running the following command in PowerShell as an administrator
-```bash
-    Set-ExecutionPolicy Unrestricted -Scope CurrentUser
-
-```
-If prompted, type A (for Yes to All) and press Enter. Now, try running your npm install command again.
-
-- Enter number of wallets when prompted
-- Find saved wallets in solana_wallet_outputs.txt
-- DELETE solana_wallet_outputs.txt from VPS after download
-- Store mnemonics in encrypted storage
-- Never expose private keys online
-- Maintain offline backups
-
-DISCLAIMER -- This tool is provided "as-is" for educational purposes. The developers assume no responsibility for lost funds or security breaches. Always audit generated wallets before mainnet use.
-
-
-## ABOUT ME
-
-Twitter -- https://x.com/SHASHI522004
-
-Github -- https://github.com/cryptowithshashi
+Đối với khôi phục ví, ae cập nhật seed pharse vào file excel lúc tạo ví. Cập nhật vào cột mnemonic. Các cột khác tool sẽ tự động cập nhật khi ae chạy khôi phục ví
